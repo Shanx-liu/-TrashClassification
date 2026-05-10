@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垃圾分類工具</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="">
+</head>
+<body>
+    <div id="head-text">
+        <button class="menu">&#9776;</button>
+        <ul class="nav-list">
+            <li id="class-1">一般垃圾</li>
+            <li id="class-2">紙類</li>
+            <li id="class-3">塑膠類</li>
+            <li id="class-4">金屬類</li>
+            <li id="class-5">玻璃類</li>
+            <li id="class-6">電池類</li>
+            <li id="class-7">照明光源</li>
+            <li id="class-8">電子電器</li>
+            <li id="class-9">舊衣類</li>
+            <li id="class-10">廚餘類</li>
+        </ul>
+        <div id="h1-text">
+            <h1>垃圾分類工具</h1>
+        </div>
+    </div>
+    <div id="caption">
+        <p>只須拍照上傳即可知道垃圾類別以及處理方式</p>
+    </div>
+    <div id="image-layout">
+        <p id='placeholder'>請上傳圖片</p>
+        <input type="file" id="fileinput" accept="image/*">
+        <img id="fileimg" src="">
+    </div>
+    <div id="filename"></div>
+    <div id="upload-button">
+        <button id="inputbutton">選擇圖片</button>
+        <button id="upbutton">上傳</button>
+    </div>
+    <!--下面為模型預測完後跳出之訊息框-->
+    <dialog id="result-dialog">
+        <div id="modal-content">
+            <img id="dialog-img" src="">
+            <p id="trash-class"></p>    <!--垃圾類別-->
+            <p id="trash-handle"></p>   <!--處理方式-->
+            <button id="close-button">確定</button>
+        </div>
+    </dialog>
+    <!--下面為左側垃圾類別選單跳出之訊息框-->
+    <dialog id="simple-dialog">
+        <div id="simple-content">
+            <img id="simple-picture" src="">    <!--簡易插圖-->
+            <p id="simple-trash-class"></p>    <!--垃圾類別-->
+            <p id="simple-trash-handle"></p>   <!--處理方式-->
+            <button id="simple-close-button">確定</button>
+        </div>
+    </dialog>
+    <footer>
+        <p>Copyright2025 © 垃圾分類工具. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.3/dist/heic2any.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

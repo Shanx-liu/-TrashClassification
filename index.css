@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F1F8E9;
+}
+#head-text {
+    height: 9vh;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #16A34A;
+    display: flex;
+}
+.menu {
+    height: 6vh;
+    width: 40px;
+    background-color: #15803D;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    border: 1px solid #ffffff;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.menu:active {
+    background-color: #16A34A;
+}
+#h1-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+#head-text h1 {
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+}
+.nav-list {
+    display: none;
+    border: 1px  solid #ffffff;
+}
+.nav-list.active {
+    display: flex;
+    flex-direction: column;
+    height: 355px;
+    width: 80px;
+    background-color: #16A34A;
+    color: white;
+    margin-top: 65px;
+    margin-left: -50px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 2;
+    list-style-type: none;
+    z-index: 15;
+}
+.nav-list li {
+    border: 1px  solid #ffffff;
+}
+.nav-list li:active {
+    background-color: #15803D;
+}
+#caption {
+    color: #4b4b4b;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+/*圖片預覽與上傳按鈕樣式*/
+#image-layout {
+    width: 329px;
+    height: 67vh;
+    margin: auto;
+    margin-top: 1vh;
+    border-radius: 25px ;
+    border-width: 4px;
+    border-style: dashed;
+    border-color: #15803D;
+}
+#placeholder {
+    color: rgb(10, 10, 73);
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 220px;
+}
+#fileimg {
+    position: relative;
+    width: 329px;
+    height: 67vh;
+    border-radius: 25px;
+    object-fit: cover;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+#fileinput {
+    display: none;
+}
+#filename {
+    color: #4b4b4b;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    height: 25px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#upload-button {
+    margin: auto;
+    height: 12vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d0ecad;
+}
+#upload-button button {
+    background-color: #16A34A;
+    width: 40%;
+    height: 8vh; 
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    border: 1px solid #969696;
+    border-radius: 10px;
+}
+#upload-button button:active {
+    font-size: 25px;
+    background-color: #15803D;
+}
+/*回傳結果訊息框、左側選單類別訊息框樣式*/
+#result-dialog , #simple-dialog{
+    background-color: #F1F8E9;
+    width: 70vw;
+    height: 55vh;
+    margin: auto;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 3px #000000;
+    padding: 6%;
+}
+#result-dialog::backdrop, #simple-dialog::backdrop {
+    background: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+#modal-content, #simple-content {
+    display: flex;
+    flex-direction: column;
+}
+#dialog-img, #simple-picture {
+    width: 33vh;
+    height: 33vh;
+    border-radius: 15px;
+    margin: auto;
+    object-fit: cover;
+}
+#close-button, #simple-close-button {
+    width: 35vw;
+    height: 6vh;
+    background-color: #16A34A;
+    border: 1px solid #969696;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 2.5vh;
+}
+#close-button:active, #simple-close-button:active {
+    font-size: 22px;
+    background-color: #15803D;
+}
+#trash-class, #simple-trash-class {
+    color: #1B4332;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 2vh;
+}
+#trash-handle, #simple-trash-handle {
+    color: #1B4332;
+    font-size: 17px;
+    font-weight: 500;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+footer {
+    background-color: black;
+    height: 4vh;
+    color: rgb(120, 117, 117);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*響應式設計語法*/
+/*電腦版網站*/
+@media screen and (min-width:768px) {
+    #head-text {
+        font-size: 25px;
+        height: 11vh;
+    }    
+    #h1-text {
+        margin-top: -16px;
+    }
+    #caption {
+        font-size: 25px;
+    }
+    .menu {
+        display: none;
+    }
+    .nav-list {
+        display: block;
+        position: absolute;
+        top: 75px;
+        background-color: rgb(255, 230, 193);
+        border: 1px solid white;
+    }
+    .nav-list li {
+        background-color: #72d355;
+        border: 1px solid white;
+        height: 50.3px;
+        width: 150px;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 2.5;
+        transition: 0.2s;
+    }
+    .nav-list li:hover {
+        background-color: #15803D;
+        color: white;
+        font-size: 25px;
+        line-height: 2.1;
+        
+    }
+    #image-layout {
+        height: 63.4vh;
+        width: 50%;
+        margin-top: 10px;
+    }
+    #placeholder {
+        margin-top: 28vh;
+    }
+    #fileimg {
+        height: 63.4vh;
+        margin: auto;
+        width: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+    #filename {
+        font-size: 25px;
+    }
+    #upload-button {
+        margin-top: 30px;
+        height: 100px;
+    }
+    #upload-button button {
+        height: 65px;
+        font-size: 32px;
+        cursor: pointer;
+        border: none;
+        transition: 0.2s;
+    }
+    #upload-button button:hover {
+        background-color: #15803D;
+        font-size: 36px;
+        border: 1px solid #969696
+    }
+    #simple-dialog, #result-dialog {
+        width: 40vw;
+        height: 75vh;
+        padding: 0;
+    }
+    #simple-picture, #dialog-img {
+        width: 30vh;
+        height: 30vh;
+        margin-top: 5vh;
+    }
+    #simple-trash-class, #trash-class {
+        font-size: 35px;
+        margin-top: 4vh;
+    }
+    #simple-trash-handle, #trash-handle {
+        width: 70%;
+        font-size: 20px;
+        margin-top: 1.5vh;
+    }
+    #simple-close-button, #close-button {
+        width: 150px;
+        height: 60px;
+        margin-top: 20px;
+        font-size: 28px;
+        font-weight: 500;
+        color: white;
+        transition: 0.2s;
+    }
+    #simple-close-button:hover, #close-button:hover {
+        font-size: 32px;
+        background-color: #15803D;
+    }
+    footer {
+        height: 5vh;
+        font-size: 15px;
+    }
+}
